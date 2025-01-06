@@ -130,7 +130,12 @@ document.addEventListener("mousemove", (e) => {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel0');
     var scrollPosition = window.scrollY;
-    var threshold = 2400; // La altura a partir de la cual el texto desaparece
+    var threshold;
+    if (window.innerWidth < 460) {
+        threshold = 3200; // Umbral para pantallas pequeñas
+    } else {
+        threshold = 2400; // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > threshold) {
         text.classList.add('hiddenText'); // El texto desaparece
@@ -142,8 +147,16 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel1'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart = 2400; // La altura a partir de la cual el texto aparece
-    var thresholdEnd = 2600;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 3200; 
+        thresholdEnd = 3400;
+    } else {
+        thresholdStart = 2400;
+        thresholdEnd = 2600; // Umbral para pantallas más grandes
+    }
+
 
     if (scrollPosition >  thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece
@@ -155,8 +168,15 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel2'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart = 2600; 
-    var thresholdEnd = 2800;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 3400; 
+        thresholdEnd = 3600; // Umbral para pantallas pequeñas
+    } else {
+        thresholdStart = 2600;
+        thresholdEnd = 2800 // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece
@@ -169,8 +189,15 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel3'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart = 2800; 
-    var thresholdEnd = 3000;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 3600; 
+        thresholdEnd = 3800;
+    } else {
+        thresholdStart = 2800;
+        thresholdEnd = 3000; // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece
@@ -183,8 +210,15 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel4'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart = 3000; 
-    var thresholdEnd = 3200;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 3800; 
+        thresholdEnd = 4000;
+    } else {
+        thresholdStart = 3000;
+        thresholdEnd = 3200; // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece
@@ -196,8 +230,15 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel5'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart = 3200; 
-    var thresholdEnd = 3400;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 4000; 
+        thresholdEnd = 4200;
+    } else {
+        thresholdStart = 3200;
+        thresholdEnd = 3400; // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece
@@ -209,8 +250,15 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel6'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart = 3400; 
-    var thresholdEnd = 3600;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 4000; 
+        thresholdEnd = 4200;
+    } else {
+        thresholdStart = 3400;
+        thresholdEnd = 3600; // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece
@@ -222,8 +270,15 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel7'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart =3600; 
-    var thresholdEnd = 3800;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 4200; 
+        thresholdEnd = 4400;
+    } else {
+        thresholdStart = 3600;
+        thresholdEnd = 3800; // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece
@@ -236,8 +291,15 @@ window.addEventListener('scroll', function() {
 window.addEventListener('scroll', function() {
     var text = document.getElementById('nivel8'); // Cambia a tu elemento objetivo
     var scrollPosition = window.scrollY;
-    var thresholdStart = 3800; 
-    var thresholdEnd = 8000;
+    var thresholdStart;
+    var thresholdEnd;
+    if (window.innerWidth < 460) {
+        thresholdStart = 4400; 
+        thresholdEnd = 4600;
+    } else {
+        thresholdStart = 3800;
+        thresholdEnd = 5000; // Umbral para pantallas más grandes
+    }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
         text.classList.remove('hiddenText'); // El texto aparece

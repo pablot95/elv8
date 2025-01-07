@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -10,7 +12,7 @@ body{
     background-color: #141414;
     height: 100%;
     width: 100%;
-    font-family: "Roboto", serif;
+    font-family: "Tinos", serif;
     overflow-x: hidden;
 }
 
@@ -905,7 +907,7 @@ footer h3{
         left: 30%;background: linear-gradient(45deg, #00a113, #7bff4b);
     }
     .contacto{
-        height: 137vh;
+        height: 142vh;
         margin-top: 50vh;
         display: flex;
         flex-direction: column;
@@ -915,13 +917,13 @@ footer h3{
         width: 90%;
     }
     .formulario{
-        width: 90%;
+        width: 100%;
         z-index: 1;
         text-align: center;
         align-items: center;
     }
     .contact-section {
-        width: 90%;
+        width: 100%;
     }
     
     /* Encabezado del formulario */
@@ -946,8 +948,8 @@ footer h3{
         justify-content: center;
         gap: 10%;
         padding-bottom: 10%;
+        padding-top: 10%;
         z-index: 1;
-        padding-left: 10%;
         text-align: center;
     }
     
@@ -1002,7 +1004,7 @@ footer h3{
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 24px;
-        font-size: 2.5vw;
+        font-size: 3.5vw;
         transition: border-color 0.3s ease-in-out;
         z-index: 1;
     }

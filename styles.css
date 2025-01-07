@@ -905,7 +905,7 @@ footer h3{
         left: 30%;background: linear-gradient(45deg, #00a113, #7bff4b);
     }
     .contacto{
-        height: 120vh;
+        height: 137vh;
         margin-top: 50vh;
         display: flex;
         flex-direction: column;
@@ -953,22 +953,25 @@ footer h3{
     
     .info-item {
         display: flex;
+        flex-direction: column;
         align-items: center;
         font-size: 4vw;
-        color: #555;
+        font-weight: 700;
+        color: #000000;
         z-index: 1;
     }
     .info-item a{
         display: flex;
         align-items: center;
+        flex-direction: column;
         text-decoration: none;
         color: black;
         z-index: 1;
     }
     
     .info-item img {
-        width: 20%;
-        margin-right: 2%;
+        width: 25%;
+        margin-bottom: 5%;
         z-index: 1;
     }
     

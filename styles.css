@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 *{
     padding: 0;
@@ -517,7 +515,7 @@ button:hover {
 /* Encabezado del formulario */
 .contact-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     margin-bottom: 20px;
     z-index: 1;
@@ -535,14 +533,20 @@ button:hover {
 
 .contact-info {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 10%;
-    padding-bottom: 5%;
+    padding-bottom: 6%;
+    padding-top: 2%;
     z-index: 1;
+    max-width: 300px;
 }
 
 .info-item {
     display: flex;
     align-items: center;
+    text-align: center;
     font-size: 1.2vw;
     color: #555;
     z-index: 1;
@@ -556,8 +560,8 @@ button:hover {
 }
 
 .info-item img {
-    width: 10%;
-    margin-right: 2%;
+    width: 20%;
+    margin-right: 3%;
     z-index: 1;
 }
 
@@ -577,23 +581,32 @@ button:hover {
 
 label {
     font-size: 1vw;
-    margin-bottom: 5px;
-    color: #333;
+    margin-bottom: 4%;
+    color: #222222;
     z-index: 1;
+    text-align: center;
 }
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 24px;
+    padding: 2%;
+    border: 1px solid #dcdcdc;
+    border-radius: 12px;
     font-size: 1vw;
     transition: border-color 0.3s ease-in-out;
     z-index: 1;
+    text-align: center;
+    margin-bottom: 3%;
+    color: #2c2c2c;
+}
+input::placeholder,
+textarea::placeholder {
+    color: #454545;
+    font-size: 1vw;
 }
 
 input:focus, textarea:focus {
-    border-color: #468189;
+    border-color: #bcbcbc;
     outline: none;
 }
 
@@ -993,26 +1006,34 @@ footer h3{
     }
     
     label {
-        font-size: 4vw;
-        margin-bottom: 5px;
+        font-size: 3vw;
+        margin-bottom: 5%;
         color: #333;
         z-index: 1;
     }
     
     input, textarea {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 24px;
+        padding: 15px;
+        border: 1px solid #dcdcdc;
+        border-radius: 12px;
         font-size: 3.5vw;
         transition: border-color 0.3s ease-in-out;
         z-index: 1;
     }
     
     input:focus, textarea:focus {
-        border-color: #468189;
+        border-color: #000000;
         outline: none;
     }
+    input::placeholder,
+textarea::placeholder {
+    color: #2c2c2c;
+    font-size: 4vw;
+}
     
     /* Botón */
     .botonEnviar {

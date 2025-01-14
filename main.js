@@ -1,6 +1,6 @@
-/*document.addEventListener('contextmenu', function(event) {
+document.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // Bloquea el menú contextual del clic derecho
-});*/
+});
 
 let lastScrollY = window.scrollY;
 const header = document.getElementById('header');

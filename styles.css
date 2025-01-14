@@ -668,7 +668,7 @@ footer h3{
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='1015' viewBox='0 0 1440 1015' fill='none'%3E%3Cpath d='M198 242.5C42.5 242.5 26.5 356 -13.5 338V710.5V1029.5H1452.5V0.5C1422.67 43.8333 1397.18 51.6577 1322.5 89C1243.5 128.5 1243.5 217 1127 231C990.979 247.346 1038 163.5 887 163.5C736 163.5 627.856 366.193 503 338C410 317 353.5 242.5 198 242.5Z' fill='%23fff6ec'/%3E%3C/svg%3E");
         background-size: cover;
         background-attachment: fixed;
-        padding-top: 30%;
+        padding-top: 20%;
         background-color: #141414;
     }
     .fondoMac{

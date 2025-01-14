@@ -38,7 +38,7 @@ window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var threshold;
     if (window.innerWidth < 460) {
-        threshold = 10; 
+        threshold = 300; 
     } else {
         threshold = 250; 
     }

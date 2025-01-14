@@ -1,12 +1,6 @@
-/*const revealText = document.getElementById('reveal-text');
-
-document.addEventListener('mousemove', (e) => {
-    const mouseX = e.pageX;
-    const mouseY = e.pageY;
-
-
-    revealText.style.clipPath = `circle(100px at ${mouseX}px ${mouseY}px)`;
-}); */
+/*document.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // Bloquea el menú contextual del clic derecho
+});*/
 
 let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
@@ -38,15 +32,21 @@ let timeout;
 }); */
 
 
+
 window.addEventListener('scroll', function() {
-    var text = document.getElementById('disappearingText');
+    var text = document.querySelector('.subtitulo');
     var scrollPosition = window.scrollY;
-    var threshold = 200; // La altura a partir de la cual el texto desaparece
+    var threshold;
+    if (window.innerWidth < 460) {
+        threshold = 10; 
+    } else {
+        threshold = 250; 
+    }
 
     if (scrollPosition > threshold) {
-        text.classList.add('hiddenText'); // El texto desaparece
+        text.classList.add('subtitulo2');
     } else {
-        text.classList.remove('hiddenText'); // El texto vuelve a aparecer
+        text.classList.remove('subtitulo2'); 
     }
 });
 
@@ -62,7 +62,7 @@ window.addEventListener('scroll', function() {
     }
 });*/
 
-window.addEventListener('scroll', function() {
+/*window.addEventListener('scroll', function() {
     var text = document.getElementById('disappearingTitle');
     var scrollPosition = window.scrollY;
     var threshold = 400; // La altura a partir de la cual el texto desaparece
@@ -72,7 +72,7 @@ window.addEventListener('scroll', function() {
     } else {
         text.classList.remove('hiddenText'); // El texto vuelve a aparecer
     }
-});
+});*/
 
 
 /*window.addEventListener('scroll', function() {
@@ -88,13 +88,13 @@ window.addEventListener('scroll', function() {
 });*/
 
 
-const cards = document.querySelectorAll('.card');
+/*const cards = document.querySelectorAll('.card');
 
 cards.forEach((card) => {
     card.addEventListener('mousemove', (e) => {
         const { width, height, left, top } = card.getBoundingClientRect();
-        const x = (e.clientX - left - width / 2) / 7;
-        const y = (e.clientY - top - height / 2) / 7;
+        const x = (e.clientX - left - width / 2) / 30;
+        const y = (e.clientY - top - height / 2) / 30;
 
         card.style.transform = `rotateY(${x}deg) rotateX(${-y}deg)`;
     });
@@ -102,7 +102,7 @@ cards.forEach((card) => {
     card.addEventListener('mouseleave', () => {
         card.style.transform = 'rotateY(0deg) rotateX(0deg)';
     });
-});
+});*/
 
 
 
@@ -134,7 +134,7 @@ window.addEventListener('scroll', function() {
     if (window.innerWidth < 460) {
         threshold = 2850; // Umbral para pantallas pequeñas
     } else {
-        threshold = 2400; // Umbral para pantallas más grandes
+        threshold = 3900; // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > threshold) {
@@ -153,8 +153,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 2850; 
         thresholdEnd = 3100;
     } else {
-        thresholdStart = 2400;
-        thresholdEnd = 2600; // Umbral para pantallas más grandes
+        thresholdStart = 3900;
+        thresholdEnd = 4100; // Umbral para pantallas más grandes
     }
 
 
@@ -174,8 +174,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 3100; 
         thresholdEnd = 3350; // Umbral para pantallas pequeñas
     } else {
-        thresholdStart = 2600;
-        thresholdEnd = 2800 // Umbral para pantallas más grandes
+        thresholdStart = 4100;
+        thresholdEnd = 4300 // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
@@ -195,8 +195,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 3350; 
         thresholdEnd = 3600;
     } else {
-        thresholdStart = 2800;
-        thresholdEnd = 3000; // Umbral para pantallas más grandes
+        thresholdStart = 4300;
+        thresholdEnd = 4500; // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
@@ -216,8 +216,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 3600; 
         thresholdEnd = 3850;
     } else {
-        thresholdStart = 3000;
-        thresholdEnd = 3200; // Umbral para pantallas más grandes
+        thresholdStart = 4500;
+        thresholdEnd = 4700; // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
@@ -236,8 +236,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 3850; 
         thresholdEnd = 4100;
     } else {
-        thresholdStart = 3200;
-        thresholdEnd = 3400; // Umbral para pantallas más grandes
+        thresholdStart = 4700;
+        thresholdEnd = 4900; // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
@@ -256,8 +256,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 4100; 
         thresholdEnd = 4350;
     } else {
-        thresholdStart = 3400;
-        thresholdEnd = 3600; // Umbral para pantallas más grandes
+        thresholdStart = 4900;
+        thresholdEnd = 5100; // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
@@ -276,8 +276,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 4350; 
         thresholdEnd = 4600;
     } else {
-        thresholdStart = 3600;
-        thresholdEnd = 3800; // Umbral para pantallas más grandes
+        thresholdStart = 5100;
+        thresholdEnd = 5300; // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
@@ -297,8 +297,8 @@ window.addEventListener('scroll', function() {
         thresholdStart = 4600; 
         thresholdEnd = 8000;
     } else {
-        thresholdStart = 3800;
-        thresholdEnd = 5000; // Umbral para pantallas más grandes
+        thresholdStart = 5300;
+        thresholdEnd = 8100; // Umbral para pantallas más grandes
     }
 
     if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
@@ -400,27 +400,32 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
 });
 
 
-/*document.addEventListener("DOMContentLoaded", (event) => {
-    gsap.registerPlugin(ScrollTrigger)
 
-    const niveles = document.querySelectorAll('.niveles');
-    const nivelActual = document.getElementById('nivelActual');
-    const textoActual = document.getElementById('textoActual');
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleccionamos el cohete y la sección de niveles
+    const cohete = document.querySelector(".cohete");
+    const seccionNiveles = document.querySelector(".seccionNiveles");
 
-niveles.forEach((nivel, index) => {
-    ScrollTrigger.create({
-        trigger: nivel,
-        start: "top center",
-        end: "bottom center",
-        onEnter: () => {
-            const nuevoNivel = nivel.getAttribute('data-nivel');
-            const nuevoTexto = nivel.getAttribute('data-texto');
-            nivelActual.textContent = nuevoNivel;
-            textoActual.textContent = nuevoTexto;
-        },
+    // Creamos un observador para ver cuándo la sección entra en la pantalla
+    const observer = new IntersectionObserver((entries) => {
+        // Revisamos si la sección se ha hecho visible
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Si la sección entra en pantalla, activar el scroll para mover el cohete
+                window.addEventListener("scroll", function() {
+                    const scrollPosition = window.scrollY; // Posición actual del scroll
+                    const moveAmount = (scrollPosition / 950) * 29 ;
+                    cohete.style.top = `${moveAmount - 90}%`; // Ajustamos la posición del cohete
+                });
+            }
+        });
+    }, {
+        threshold: 0.01 // Ajustamos el umbral para que se active cuando al menos el 10% de la sección esté visible
     });
+
+    // Comenzamos a observar la sección de niveles
+    observer.observe(seccionNiveles);
 });
-});
-*/
+
 
 

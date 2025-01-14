@@ -12,6 +12,7 @@ body{
     width: 100%;
     font-family: "Tinos", serif;
     overflow-x: hidden;
+    cursor: none;
 }
 
 
@@ -25,14 +26,11 @@ header{
     display: flex;
     text-align: center;
     justify-content: center;
-    margin-top: 1%;
     transition: transform 0.4s ease;
     z-index: 1000;
 }
-header h1{
-    font-size: 3vw;
-    color: white;
-    transition: all 1s ease;
+header img{
+    width: 10%;
 }
 
 .hiddenHeader {
@@ -49,103 +47,90 @@ header h1{
 
 
 .firstSection{
-    height: 130vh;
+    height: 120vh;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding-right: 5%;
     padding-left: 5%;
-    background-color: rgb(0, 0, 0);
-    padding-bottom: 5%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='1015' viewBox='0 0 1440 1015' fill='none'%3E%3Cpath d='M268 263.5C112.5 263.5 26.5 430.5 -13.5 412.5V710.5V1029.5H1452.5V0.5C1422.67 43.8333 1397.18 51.6577 1322.5 89C1243.5 128.5 1243.5 217 1127 231C990.979 247.346 1038 163.5 887 163.5C736 163.5 701.714 244.598 577.5 275.5C475 301 423.5 263.5 268 263.5Z' fill='%23fff6ec'/%3E%3C/svg%3E");
+    background-size: cover;
+    background-attachment: fixed;
+    padding-top: 5%;
+    background-color: #141414;
 }
-.firstSectionMobile{
-    display: none;
-}
-
 .fondoMac{
     background-image: url(./images/FondoMac.jpeg);
     background-position: 9% center;
     background-attachment: fixed;
     background-repeat: repeat;
-    height: 100vh;
-    width:  110vw;
+    height: 75%;
+    width:  35vw;
     border-radius: 12px;
     margin-top: 6%;
 }
-
-
 .firstText{
-    text-align: left;
-    margin-top: 8%;
-    margin-left: 15%;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 7%;
+    margin-left: 1%;
+    margin-right: 4%;
 }
 .titulo{
-    font-size: 4.3vw;
-    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, rgba(254,7,255,1) 100%);
+    font-size: 5.5vw;
+    color: white;
+    font-weight: 700;
+    transition: opacity 0.7s ease, visibility 0.3s ease, transform 2s ease;
+    letter-spacing: 3px;
+}
+.titulo span{
+    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: 700;
-    font-style: italic;
-    position: sticky;
-    top: 18%;
-    transition: opacity 0.7s ease, visibility 0.3s ease, transform 2s ease;
-    margin-bottom: 4%;
 }
 .moveText{
     transform: translatey(-80%);
 }
-
-
 .subtitulo{
-    font-size: 1.9vw;
-    margin-top: 7%;
+    font-size: 2.1vw;
     font-weight: 400;
     font-style: italic;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 1px white;
     line-height: 1.3;
-    position: sticky;
-    top: 65%;
-    transition: opacity 0.7s ease, visibility 0.3s ease;
-
+    margin-top: 10%;
 }
-
-
-button {
-    font-size: 1.5vw;
-    font-weight: bold;
-    color: white; 
-    background: linear-gradient(180deg, rgba(254,7,255,1) 1%, rgba(157,11,253,1) 25%, rgba(68,14,252,1) 70%);
-    border-radius: 20px; 
-    padding: 2% 3%; 
-    cursor: pointer; 
-    transition: all 2s ease; 
-    z-index: 1002;
+.subtitulo2{
+    color: white;
+    text-shadow: none;
 }
-
-button:hover {
-    background: rgba(68,14,252,1); 
-}
-
-
-
 .buttonContainer{
     display: flex;
-    position: sticky;
-    top: 50%;
-    margin-bottom: 10%;
+    width: 20vw;
+    margin-top: 10%;
 }
-.buttonContainer a{
-    text-decoration: none;
-    display: flex;
-    width: 100%;
-    transition: all 2s ease; 
+.button{
+    width: 20vw;
+    height: 6vh;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: linear-gradient(90deg, #440efc 17%, rgba(157,11,253,1) 70%, #e6007f 100%);;
+    color: white;
+    font-size: 1.4vw;
+    letter-spacing: 2px;
+    font-weight: 600;
+    cursor: none;
+    transition: all 4s ease;
+}
+.button:hover{
+    background: linear-gradient(90deg, #440efc 17%, #440efc 70%, #440efc 100%); 
 }
 
-.enlargeButton {
-    transform: translateX(65%) translateY(-100%) scale(1.3); 
-    
-}
+
 
 
 
@@ -154,12 +139,11 @@ button:hover {
 
 .image-slider {
     width: 100%; 
-    height: 35vh; 
-    background-color: rgb(255, 236, 243);
+    height: 30vh; 
+    background-color: #fff6ec;
     overflow: hidden; 
     position: relative;
     z-index: 1;
-    padding-top: 5%;
 }
 
 
@@ -167,7 +151,7 @@ button:hover {
     display: flex; 
     animation: slide 15s linear infinite; 
     gap: 5%;
-    height: 75%;
+    height: 100%;
     align-items: center;
 }
 
@@ -191,91 +175,137 @@ button:hover {
 /* SERVICIOS */
 
 .servicios{
-    height: 170vh;
+    height: 130%;
     display: flex; 
-    flex-direction: row;
-    gap: 1%;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+    padding-top: 5%;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 7%;
     perspective: 1000px;
-    background-color: rgb(255, 236, 243);
+    background-color: #fff6ec;
 }
-
+.servicios h2{
+    font-size: 6vw;
+    margin-bottom: 5%;
+    position: sticky;
+    top: 10%;
+}
 
 .serviciosColumn{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 5%;
+
 }
 
 .card{
     position: relative;
-    height: 60vh;
-    width: 35vw;
-    border-radius: 8%; 
-    background: linear-gradient(180deg, rgba(254,7,255,1) 17%, rgba(157,11,253,1) 49%, rgba(68,14,252,1) 88%);
-    padding: 2%;
+    height: 75vh;
+    width: 70vw;
+    border-radius: 12px; 
+    background: linear-gradient(180deg, #e6007f 17%, rgba(157,11,253,1) 49%, rgba(68,14,252,1) 88%);
+    padding: 0.5%;
+    margin-bottom: 8%;
     display: flex;
     align-items: center; 
     justify-content: center;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    perspective: 1000px;
+}
+.card:hover{
+    background: linear-gradient(180deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 49%, #e6007f 88%);
+}
+.card:hover h4{
+    background: linear-gradient(180deg, #e6007f 17%, rgba(157,11,253,1) 49%, rgba(68,14,252,1) 88%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
 .cardContent {
     background-color: white; 
-    border-radius: 8%;
+    border-radius: 12px;
     width: 100%;
     height: 100%; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
     text-align: center;
+    justify-content: center;
     transition: transform 0.3s ease, color 0.3s ease;
     transform: translateZ(0);
     transform-style: preserve-3d;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 4%;
+    padding-right: 10%;
+    padding-bottom: 3%;
 }
 
-.cardContent h3{
-    color: rgb(0, 0, 0);
-    font-size: 2.5vw;
+
+.cardContent h4{
+    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4vw;
     transition: transform 0.3s ease;
-    text-shadow: 1px 1px 2px white;
-}
-.card:hover h3 {
-    transform: scale(1.1) translateZ(130px) rotateY(2deg);
+    margin-right: 40%;
+    padding-bottom: 13%;
+    padding-top: 10%;
 }
 
-.cardContent img{
-    height: 20%;
-    transition: transform 0.3s ease;
-}
-.card:hover img {
-    transform: scale(1.7) translateZ(200px) rotateY(2deg);
-}
+
 
 .cardContent p{
     color: #000;
-    font-size: 2vw;
+    font-size: 2.7vw;
     font-weight: 500;
-    font-style: italic;
     transition: transform 0.3s ease;
     text-shadow: 1px 1px 2px white;
 }
-.card:hover p {
-    transform: scale(1.05) translateZ(100px) rotateY(2deg);
+
+
+#card1{
+    position: sticky;
+    top: 13%;
 }
-
-
+#cardFondo1{
+    background-image: url(./images/LandingPage.jpg);
+    background-position: top right; /* Ubicación en la esquina inferior derecha */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-size: 40%;
+}
+#card2{
+    position: sticky;
+    top: 18%;
+    
+}
+#cardFondo2{
+    background-image: url(./images/MarketingRedes.jpg);
+    background-position: top right; /* Ubicación en la esquina inferior derecha */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-size: 40%;
+}
+#card3{
+    position: sticky;
+    top: 23%;
+}
+#cardFondo3{
+    background-image: url(./images/DiseñoWeb.jpg);
+    background-position: top right; /* Ubicación en la esquina inferior derecha */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-size: 40%;
+}
+#card4{
+    position: sticky;
+    top: 28%;
+}
+#cardFondo4{
+    background-image: url(./images/Mantenimiento.jpg);
+    background-position: top right; /* Ubicación en la esquina inferior derecha */
+    background-repeat: no-repeat; /* Evita que se repita */
+    background-size: 40%;
+}
 
 
 /* ESTELA */
@@ -288,9 +318,9 @@ button:hover {
 
 .trail {
     position: absolute;
-    width: 8px; 
-    height: 8px;
-    background: #F3DACE; 
+    width: 15px; 
+    height: 15px;
+    background: #ffc9b0; 
     border-radius: 50%;
     pointer-events: none; 
     animation: fadeOut 1s forwards;
@@ -314,23 +344,42 @@ button:hover {
 /* NIVELES */
 
 .seccionNiveles{
-    height: 280vh;
+    height: 340vh;
     text-align: center;
     position: relative;
     padding-top: 5%;
+    background-image: url(./images/Fondolargo1.jpg);
+    background-size: cover;
+    padding-bottom: 80vh;
+}
+.seccionNiveles::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad */
+    z-index: 1;
+}
+
+.seccionNiveles > * {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de la capa */
 }
 
 .textoElevar{
     color: white;
     font-size: 4vw;
-
+    text-shadow: 4px 4px 0px black;
 }
 .textoElevar span{
-    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, rgba(254,7,255,1) 100%);
+    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 4.5vw;
+    text-shadow: none;
 }
 .textoContainer{
     position: sticky;
@@ -338,7 +387,6 @@ button:hover {
 }
 
 .nivelesContainer{
-
     position: sticky;
     top: 28%;
 }
@@ -350,113 +398,26 @@ button:hover {
     padding-right: 20%;
     transition: opacity 0.5s ease-in-out;
 }
-.niveles h3{
+.niveles h4{
     margin-top: 10%;
     font-size: 3.5vw;
     color: white;
+    text-shadow: 4px 4px 0px black;
 }
 .niveles p{
     margin-top: 5%;
     font-size: 2.5vw;
     color: white;
+    text-shadow: 4px 4px 0px black;
 }
 
-.circle {
-    position: absolute; 
-    border-radius: 50%;
 
-    opacity: 1;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: -100;
-}
-
-/* Tamaño y posición de los círculos */
-#circle1 {
-    width: 100px;
-    height: 100px;
-    top: 15%;
-    left: 5%;
-    background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-}
-#circle2 {
-    width: 150px;
-    height: 150px;
-    top: 50%;
-    left: 80%;
-    background: linear-gradient(45deg, #3419ff, #9b89ff);
-}
-#circle3 {
-    width: 80px;
-    height: 80px;
-    top: 80%;
-    left: 15%;
-    background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-}
-#circle4{
-    width: 100px;
-    height: 100px;
-    top: 0%;
-    left: 50%;
-    background: linear-gradient(45deg, #d2d200, #fbff92);
-}
-#circle5{
-    width: 100px;
-    height: 100px;
-    top: 160%;
-    left: 35%;
-    background: linear-gradient(45deg, #be0000, #ff657f);
-}
-#circle6{
-    width: 100px;
-    height: 100px;
-    top: 230%;
-    left: 5%;
-    background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-}
-#circle7{
-    width: 100px;
-    height: 100px;
-    top: 95%;
-    left: 70%;
-    background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-}
-#circle8{
-    width: 80px;
-    height: 80px;
-    top: 200%;
-    left: 60%;
-    background: linear-gradient(45deg, #030092, #6778ff);
-}
-#circle9{
-    width: 60px;
-    height: 60px;
-    top: 120%;
-    left: 30%;
-    background: linear-gradient(45deg, #8600fb, #b22dff);
-}
-#circle10{
-    width: 100px;
-    height: 100px;
-    top: 180%;
-    left: 10%;background: linear-gradient(45deg, #989b00, #fdff9b);
-}
-#circle11{
-    width: 100px;
-    height: 100px;
-    top: 135%;
-    left: 70%;background: linear-gradient(45deg, #d9f100, #fffd93);
-}
-#circle12{
-    width: 100px;
-    height: 100px;
-    top: 220%;
-    left: 80%;background: linear-gradient(45deg, #001c9a, #57a8ff);
-}
-#circle13{
-    width: 100px;
-    height: 100px;
-    top: 75%;
-    left: 78%;background: linear-gradient(45deg, #00a113, #7bff4b);
+.cohete {
+    position: absolute;
+    width: 10vw; /* Ajusta el tamaño del cohete */
+    top: 30%;
+    right: 10%;
+    transition: transform 0.1s linear;
 }
 
 
@@ -466,17 +427,16 @@ button:hover {
 
 
 .contacto{
-    height: 110vh;
+    height: 100%;
     background-color: white;
     background-image: url(./images/fondoBlancod.png);
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 80vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 10%;
+    padding: 8%;
 }
 
 .imagenContacto{
@@ -516,14 +476,15 @@ button:hover {
 .contact-header {
     display: flex;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     margin-bottom: 20px;
     z-index: 1;
 }
 
-.contact-header h2 {
-    font-size: 3vw;
-    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, rgba(254,7,255,1) 100%);
+.contact-header h3 {
+    font-size: 4vw;
+    background: linear-gradient(90deg, #440efc 17%, #9d0bfd 70%, #e6007f 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -602,7 +563,7 @@ input, textarea {
 input::placeholder,
 textarea::placeholder {
     color: #454545;
-    font-size: 1vw;
+    font-size: 1.2vw;
 }
 
 input:focus, textarea:focus {
@@ -613,14 +574,13 @@ input:focus, textarea:focus {
 /* Botón */
 .botonEnviar {
     padding: 10px 15px;
-    background-color: #468189;
+    background: linear-gradient(90deg, #440efc 17%, rgba(157,11,253,1) 70%, #e6007f 100%);;;
     color: white;
     border: none;
     border-radius: 12px;
-    font-size: 1vw;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
+    font-size: 1.3vw;
     z-index: 1;
+    cursor: none;
 }
 
 .botonEnviar:hover {
@@ -631,10 +591,7 @@ input:focus, textarea:focus {
 
 
 
-
-
-
-
+/*FOOTER*/
 
 
 footer{
@@ -644,22 +601,39 @@ footer{
     justify-content: space-between;
     padding-left: 15%;
     padding-right: 5%;
+    background-color: #141414;
 }
-footer h1{
-    font-size: 4vw;
-    color: white;
+.footerIzq{
+    width: 45%;
+}
+footer img{
+    width: 50%;
 }
 footer h3{
     font-size: 2.5vw;
-    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, rgba(254,7,255,1) 100%);
+    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-
-
-
-
+.footerDer a img{
+    width: 30px;
+    height: auto;
+    cursor: none;
+}
+.footerDer{
+    margin-top: 3%;
+}
+.footerInfo{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.footerInfo p{
+    color: white;
+    font-size: 1.2vw;
+}
 
 
 
@@ -674,85 +648,76 @@ footer h3{
 
 @media (max-height: 600px) {
     .seccionNiveles{
-        height: 400vh;
+        height: 530vh;
     }
 }
 
 
 @media (max-width: 460px) {
 
-    header h1{
-        font-size: 6vw;
-            padding-top: 3%;
+    header img{
+        width: 30%;
     }
     .firstSection{
-        display: none;
-    }
-    .firstSectionMobile{
+        height: 90vh;
         display: flex;
         flex-direction: column;
-        height: 150%;
-        background-image: url(./images/fondoNegro.png);
-        background-size: contain;
+        justify-content: space-between;
+        padding-right: 5%;
+        padding-left: 5%;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='1015' viewBox='0 0 1440 1015' fill='none'%3E%3Cpath d='M198 242.5C42.5 242.5 26.5 356 -13.5 338V710.5V1029.5H1452.5V0.5C1422.67 43.8333 1397.18 51.6577 1322.5 89C1243.5 128.5 1243.5 217 1127 231C990.979 247.346 1038 163.5 887 163.5C736 163.5 627.856 366.193 503 338C410 317 353.5 242.5 198 242.5Z' fill='%23fff6ec'/%3E%3C/svg%3E");
+        background-size: cover;
         background-attachment: fixed;
-        padding-bottom: 5%;
+        padding-top: 30%;
+        background-color: #141414;
+    }
+    .fondoMac{
+        display: none;
+    }
+    .firstText{
         display: flex;
+        flex-direction: column;
         align-items: center;
-    }
-    .fondoMacMobile{
-        background-image: url(./images/FondoMac.jpeg);
-        background-attachment: fixed;
-        background-repeat: repeat;
-        height: 50vh;
-        width:  90vw;
-        border-radius: 12px;
-        margin-top: 20%;
-
-    }
-    
-    
-    .firstTextMobile{
         text-align: center;
-        margin-top: 8%;
-    
+        margin-top: 2%;
     }
-    .tituloMobile{
-        font-size: 10vw;
-        line-height: 1.5;
-        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, rgba(254,7,255,1) 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-        font-style: italic;
-        transition: opacity 0.7s ease, visibility 0.3s ease, transform 2s ease;
-        margin-bottom: 10%;
-        margin-top: 30%;
-    }
-    
-    
-    .subtituloMobile{
-        font-size: 6vw;
-        margin-top: 20%;
-        font-weight: 300;
-        font-style: italic;
+    .titulo{
+        font-size: 13vw;
         color: white;
+        font-weight: 700;
+        transition: opacity 0.7s ease, visibility 0.3s ease, transform 2s ease;
+        letter-spacing: 2px;
+        margin-bottom: 10%;
+        line-height: 1.9;
+    }
+    .subtitulo{
+        font-size: 9vw;
+        font-weight: 400;
+        font-style: italic;
+        color: rgb(0, 0, 0);
+        text-shadow: 1px 1px 1px white;
         line-height: 1.3;
-        transition: opacity 0.7s ease, visibility 0.3s ease;
-        padding-left: 7%;
-        padding-right: 7%;
+        margin-top: 10%;
+    }
+    .buttonContainer{
+        display: flex;
+        width: 80vw;
+        margin-top: 25%;
+    }
+    .button{
+        width: 80vw;
+        height: 6vh;
+        border-radius: 12px;
+        border: none;
+        outline: none;
+        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);;
+        color: white;
+        font-size: 4vw;
+        letter-spacing: 2px;
+        font-weight: 600;
+        cursor: none;
     }
 
-    .buttonContainerMobile a{
-        text-decoration: none;
-        transition: all 2s ease; 
-    }
-    #buttonMobile{
-        height: 60px;
-        width: 300px;
-        font-size: 6vw;
-        margin-top: 20%;
-    }
     .image-container {
         display: flex; 
         animation: slide 10s linear infinite; 
@@ -769,22 +734,26 @@ footer h3{
         padding-bottom: 10%;
         padding-top: 15%;
     }
+    .servicios h2{
+        font-size: 11vw;
+        margin-bottom: 15%;
+        position: sticky;
+        top: 13%;
+    }
     .card{
         width: 90vw;
-        height: 37vh;
-        margin-bottom: 7%;
+        height: 40vh;
+        margin-bottom: 15%;
     }
-    .cardContent h3{
+    .cardContent h4{
         font-size: 7vw;
+        margin-top: -10%;
     }
     .cardContent p{
-        font-size: 5vw;
-    }
-    .cardContent img{
-        height: 30%;
+        font-size: 6vw;
     }
     .seccionNiveles{
-        height: 300vh;
+        height: 400vh;
         text-align: center;
         position: relative;
         padding-top: 20%;
@@ -797,7 +766,7 @@ footer h3{
         margin-bottom: 20%;
     }
     .textoElevar span{
-        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, rgba(254,7,255,1) 100%);
+        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -806,12 +775,12 @@ footer h3{
     }
     .textoContainer{
         position: sticky;
-        top: 10%;
+        top: 20%;
     }
     
     .nivelesContainer{
         position: sticky;
-        top: 35%;
+        top: 50%;
     }
     .niveles{
         position: absolute;
@@ -821,7 +790,7 @@ footer h3{
         padding-right: 10%;
         transition: opacity 0.5s ease-in-out;
     }
-    .niveles h3{
+    .niveles h4{
         margin-top: 10%;
         font-size: 10vw;
         color: white;
@@ -832,96 +801,8 @@ footer h3{
         font-size: 7vw;
         color: white;
     }
-    #circle1 {
-        width: 100px;
-        height: 100px;
-        top: 15%;
-        left: 5%;
-        background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-    }
-    #circle2 {
-        width: 150px;
-        height: 150px;
-        top: 50%;
-        left: 40%;
-        background: linear-gradient(45deg, #3419ff, #9b89ff);
-    }
-    #circle3 {
-        width: 80px;
-        height: 80px;
-        top: 80%;
-        left: 15%;
-        background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-    }
-    #circle4{
-        width: 100px;
-        height: 100px;
-        top: 0%;
-        left: 50%;
-        background: linear-gradient(45deg, #d2d200, #fbff92);
-    }
-    #circle5{
-        width: 100px;
-        height: 100px;
-        top: 160%;
-        left: 35%;
-        background: linear-gradient(45deg, #be0000, #ff657f);
-    }
-    #circle6{
-        width: 100px;
-        height: 100px;
-        top: 230%;
-        left: 5%;
-        background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-    }
-    #circle7{
-        width: 100px;
-        height: 100px;
-        top: 95%;
-        left: 70%;
-        background: linear-gradient(45deg, #ff7eb3, #ff2d50);
-    }
-    #circle8{
-        width: 80px;
-        height: 80px;
-        top: 200%;
-        left: 60%;
-        background: linear-gradient(45deg, #030092, #6778ff);
-    }
-    #circle9{
-        width: 60px;
-        height: 60px;
-        top: 120%;
-        left: 30%;
-        background: linear-gradient(45deg, #8600fb, #b22dff);
-    }
-    #circle10{
-        width: 100px;
-        height: 100px;
-        top: 180%;
-        left: 10%;background: linear-gradient(45deg, #989b00, #fdff9b);
-    }
-    #circle11{
-        width: 100px;
-        height: 100px;
-        top: 135%;
-        left: 70%;background: linear-gradient(45deg, #d9f100, #fffd93);
-    }
-    #circle12{
-        width: 100px;
-        height: 100px;
-        top: 250%;
-        left: 40%;background: linear-gradient(45deg, #001c9a, #57a8ff);
-    }
-    #circle13{
-        width: 100px;
-        height: 100px;
-        top: 75%;
-        left: 30%;background: linear-gradient(45deg, #00a113, #7bff4b);
-    }
     .contacto{
-        height: 142vh;
-        margin-top: 50vh;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -949,8 +830,8 @@ footer h3{
         text-align: center;
     }
     
-    .contact-header h2 {
-        font-size: 9vw;
+    .contact-header h3 {
+        font-size: 10vw;
         text-align: center;
     }
     
@@ -1038,19 +919,13 @@ textarea::placeholder {
     /* Botón */
     .botonEnviar {
         padding: 10px 15px;
-        background-color: #468189;
         color: white;
         border: none;
         border-radius: 12px;
         font-size: 4vw;
-        cursor: pointer;
         transition: background-color 0.3s ease-in-out;
         z-index: 1;
-    }
-    
-    .botonEnviar:hover {
-        background: rgba(68,14,252,1); 
-        border: 2px solid #468189; 
+        margin-bottom: 15%;
     }
     footer{
         height: 30vh;
@@ -1061,18 +936,31 @@ textarea::placeholder {
         padding-left: 10%;
         padding-right: 10%;
     }
-    footer h1{
-        font-size: 10vw;
-        color: white;
+    .footerIzq{
+        display: flex;
+        justify-content: center;
+    }
+    footer img{
+        width: 100%;
     }
     footer h3{
         font-size: 5vw;
-        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, rgba(254,7,255,1) 100%);
+        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
         margin-bottom: 10%;
+    }
+    .footerDer p{
+        font-size: 3vw;
+        margin-top: 5%;
+    }
+    .footerInfo{
+        flex-direction: column;
+    }
+    .cohete{
+        display: none;
     }
 }
 

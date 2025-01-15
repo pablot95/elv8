@@ -132,7 +132,7 @@ window.addEventListener('scroll', function() {
     var scrollPosition = window.scrollY;
     var threshold;
     if (window.innerWidth < 460) {
-        threshold = 2850; // Umbral para pantallas pequeñas
+        threshold = 2650; // Umbral para pantallas pequeñas
     } else {
         threshold = 3900; // Umbral para pantallas más grandes
     }
@@ -150,8 +150,8 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 2850; 
-        thresholdEnd = 3100;
+        thresholdStart = 2650; 
+        thresholdEnd = 2900;
     } else {
         thresholdStart = 3900;
         thresholdEnd = 4100; // Umbral para pantallas más grandes
@@ -171,8 +171,8 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 3100; 
-        thresholdEnd = 3350; // Umbral para pantallas pequeñas
+        thresholdStart = 3900; 
+        thresholdEnd = 3150; // Umbral para pantallas pequeñas
     } else {
         thresholdStart = 4100;
         thresholdEnd = 4300 // Umbral para pantallas más grandes
@@ -192,8 +192,8 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 3350; 
-        thresholdEnd = 3600;
+        thresholdStart = 3150; 
+        thresholdEnd = 3400;
     } else {
         thresholdStart = 4300;
         thresholdEnd = 4500; // Umbral para pantallas más grandes
@@ -213,8 +213,8 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 3600; 
-        thresholdEnd = 3850;
+        thresholdStart = 3400; 
+        thresholdEnd = 3650;
     } else {
         thresholdStart = 4500;
         thresholdEnd = 4700; // Umbral para pantallas más grandes
@@ -233,8 +233,8 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 3850; 
-        thresholdEnd = 4100;
+        thresholdStart = 3650; 
+        thresholdEnd = 3900;
     } else {
         thresholdStart = 4700;
         thresholdEnd = 4900; // Umbral para pantallas más grandes
@@ -253,8 +253,8 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 4100; 
-        thresholdEnd = 4350;
+        thresholdStart = 3900; 
+        thresholdEnd = 4150;
     } else {
         thresholdStart = 4900;
         thresholdEnd = 5100; // Umbral para pantallas más grandes
@@ -273,8 +273,8 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 4350; 
-        thresholdEnd = 4600;
+        thresholdStart = 4150; 
+        thresholdEnd = 4400;
     } else {
         thresholdStart = 5100;
         thresholdEnd = 5300; // Umbral para pantallas más grandes
@@ -294,7 +294,7 @@ window.addEventListener('scroll', function() {
     var thresholdStart;
     var thresholdEnd;
     if (window.innerWidth < 460) {
-        thresholdStart = 4600; 
+        thresholdStart = 4400; 
         thresholdEnd = 8000;
     } else {
         thresholdStart = 5300;

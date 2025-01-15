@@ -767,7 +767,7 @@ footer h3{
         color: white;
         font-size: 10vw;
         line-height: 1.5;
-        margin-bottom: 20%;
+        margin-bottom: 15%;
     }
     .textoElevar span{
         background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
@@ -795,10 +795,10 @@ footer h3{
         transition: opacity 0.5s ease-in-out;
     }
     .niveles h4{
-        margin-top: 10%;
+        margin-top: 5%;
         font-size: 10vw;
         color: white;
-        margin-bottom: 20%;
+        margin-bottom: 10%;
     }
     .niveles p{
         margin-top: 5%;

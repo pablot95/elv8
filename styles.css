@@ -7,12 +7,10 @@
 }
 
 body{
-    background-color: #141414;
     height: 100%;
     width: 100%;
     font-family: "Tinos", serif;
     overflow-x: hidden;
-    cursor: none;
 }
 
 
@@ -26,19 +24,13 @@ header{
     display: flex;
     text-align: center;
     justify-content: center;
-    transition: transform 0.4s ease;
     z-index: 1000;
 }
-header img{
+header a{
     width: 10%;
 }
-
-.hiddenHeader {
-    transform: translateY(-110%);
-}
-.hiddenText{
-    opacity: 0;
-    visibility: hidden;
+header img{
+    width: 100%;
 }
 
 
@@ -47,151 +39,121 @@ header img{
 
 
 .firstSection{
-    height: 120vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 5%;
-    padding-left: 5%;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='1015' viewBox='0 0 1440 1015' fill='none'%3E%3Cpath d='M268 263.5C112.5 263.5 26.5 430.5 -13.5 412.5V710.5V1029.5H1452.5V0.5C1422.67 43.8333 1397.18 51.6577 1322.5 89C1243.5 128.5 1243.5 217 1127 231C990.979 247.346 1038 163.5 887 163.5C736 163.5 701.714 244.598 577.5 275.5C475 301 423.5 263.5 268 263.5Z' fill='%23fff6ec'/%3E%3C/svg%3E");
-    background-size: cover;
-    background-attachment: fixed;
-    padding-top: 2%;
+    height: 105vh;
     background-color: #141414;
-}
-.fondoMac{
-    background-image: url(./images/FondoMac.jpeg);
-    background-position: 9% center;
-    background-attachment: fixed;
-    background-repeat: repeat;
-    height: 75%;
-    width:  35vw;
-    border-radius: 12px;
-    margin-top: 6%;
-}
-.firstText{
+    position: relative;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 7%;
-    margin-left: 1%;
-    margin-right: 4%;
-    animation-duration: 3s;
+    overflow: hidden;
 }
+.firstSection video {
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+    z-index: 1;
+    opacity: 0.4;
+}
+.firstSection a{
+    text-decoration: none;
+    color: white;
+}
+.ofrecemos{
+    position: absolute;
+    top: 4%;
+    right: 25%;
+    font-size: 1.5vw;
+    font-weight: 500;
+}
+
 .titulo{
-    font-size: 5.5vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    position: absolute;
+    top: 20%;
+    font-size: 6.5vw;
     color: white;
     font-weight: 700;
     transition: opacity 0.7s ease, visibility 0.3s ease, transform 2s ease;
-    letter-spacing: 3px;
-}
-.titulo span{
-    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.moveText{
-    transform: translatey(-80%);
-}
-.subtitulo{
-    font-size: 2.1vw;
-    font-weight: 400;
-    font-style: italic;
-    color: rgb(0, 0, 0);
-    text-shadow: 1px 1px 1px white;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 2px black;
     line-height: 1.3;
-    margin-top: 10%;
+    z-index: 3;
 }
-.subtitulo2{
+
+
+.subtitulo{
+    position: absolute;
+    top: 62%;
+    font-size: 2.7vw;
+    font-weight: 550;
+    font-style: italic;
     color: white;
-    text-shadow: none;
+    line-height: 1.3;
+    text-shadow: 1px 1px 2px black;
+    z-index: 3;
+    animation-duration: 2s;
+    animation-delay: 2s;
 }
 .buttonContainer{
     display: flex;
-    width: 20vw;
-    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 13%;
+    z-index: 3;
+    animation-duration: 2s;
+    animation-delay: 2s;
 }
 .button{
-    width: 20vw;
-    height: 6vh;
+    width: 25vw;
+    height: 7vh;
     border-radius: 12px;
     border: none;
     outline: none;
-    background: linear-gradient(90deg, #440efc 17%, rgba(157,11,253,1) 70%, #e6007f 100%);;
+    background: linear-gradient(90deg, #440ea7 60%, #be1622 100%);
     color: white;
     font-size: 1.4vw;
     letter-spacing: 2px;
     font-weight: 600;
     cursor: none;
-    transition: all 4s ease;
 }
 .button:hover{
-    background: linear-gradient(90deg, #440efc 17%, #440efc 70%, #440efc 100%); 
+    background: #440ea7; 
 }
 
 
 
 
 
-/* IMAGE SLIDER*/
 
-
-.image-slider {
-    width: 100%; 
-    height: 30vh; 
-    background-color: #fff6ec;
-    overflow: hidden; 
-    position: relative;
-    z-index: 1;
-}
-
-
-.image-container {
-    display: flex; 
-    animation: slide 15s linear infinite; 
-    gap: 5%;
-    height: 100%;
-    align-items: center;
-}
-
-
-.image-container img {
-    height: 90%; 
-    width: auto;
-    object-fit: cover; 
-}
-
-@keyframes slide {
-    0% {
-        transform: translateX(0%); /* Empieza desde la derecha (fuera de la pantalla) */
-    }
-    100% {
-        transform: translateX(-100%); /* Termina en la izquierda (fuera de la pantalla) */
-    }
-}
 
 
 /* SERVICIOS */
 
 .servicios{
-    height: 130%;
+    height: auto;
     display: flex; 
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 5%;
-    padding-left: 5%;
-    padding-right: 5%;
-    perspective: 1000px;
-    background-color: #fff6ec;
+    padding-top: 7%;
+    background-color: #ffffff;
 }
 .servicios h2{
     font-size: 6vw;
-    margin-bottom: 5%;
     position: sticky;
     top: 10%;
+    color: #440ea7;
+    margin-bottom: 10%;
+    margin-left: 10%;
+}
+.textoServicios{
+    font-size: 2vw;
+    margin-top: -10%;
+    margin-bottom: 7%;
+    position: sticky;
+    top: 22%;
+    margin-left: 10%;
 }
 
 .serviciosColumn{
@@ -204,23 +166,19 @@ header img{
 .card{
     position: relative;
     height: 75vh;
-    width: 70vw;
-    border-radius: 12px; 
-    background: linear-gradient(180deg, #e6007f 17%, rgba(157,11,253,1) 49%, rgba(68,14,252,1) 88%);
-    padding: 0.5%;
+    width: 85vw;
     margin-bottom: 8%;
     display: flex;
     align-items: center; 
     justify-content: center;
+    border-radius: 12px;
+    background: #e0e0e0;
+    box-shadow:  -5px -5px 12px #5a5a5a,
+                5px 5px 9px #ffffff;
 }
 .card:hover{
-    background: linear-gradient(180deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 49%, #e6007f 88%);
-}
-.card:hover h4{
-    background: linear-gradient(180deg, #e6007f 17%, rgba(157,11,253,1) 49%, rgba(68,14,252,1) 88%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    box-shadow:  -5px -5px 12px #5a5a5a,
+    -5px -5px 12px #5a5a5a;
 }
 
 
@@ -244,14 +202,14 @@ header img{
 
 
 .cardContent h4{
-    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
+    background: linear-gradient(90deg, #440ea7 50%, #be1622 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 4vw;
+    font-size: 4.7vw;
     transition: transform 0.3s ease;
     margin-right: 40%;
-    padding-bottom: 13%;
+    padding-bottom: 7%;
     padding-top: 10%;
 }
 
@@ -259,16 +217,17 @@ header img{
 
 .cardContent p{
     color: #000;
-    font-size: 2.7vw;
+    font-size: 2vw;
     font-weight: 500;
     transition: transform 0.3s ease;
     text-shadow: 1px 1px 2px white;
+    margin-right: 40%;
 }
 
 
 #card1{
     position: sticky;
-    top: 13%;
+    top: 12%;
 }
 #cardFondo1{
     background-image: url(./images/LandingPage.jpg);
@@ -278,7 +237,7 @@ header img{
 }
 #card2{
     position: sticky;
-    top: 18%;
+    top: 16%;
     
 }
 #cardFondo2{
@@ -289,17 +248,17 @@ header img{
 }
 #card3{
     position: sticky;
-    top: 23%;
+    top: 20%;
 }
 #cardFondo3{
-    background-image: url(./images/DiseñoWeb.jpg);
+    background-image: url(./images/SEO.jpg);
     background-position: top right; /* Ubicación en la esquina inferior derecha */
     background-repeat: no-repeat; /* Evita que se repita */
     background-size: 40%;
 }
 #card4{
     position: sticky;
-    top: 28%;
+    top: 24%;
 }
 #cardFondo4{
     background-image: url(./images/Mantenimiento.jpg);
@@ -342,83 +301,99 @@ header img{
 
 
 
-/* NIVELES */
+/* IMAGE SLIDER*/
 
-.seccionNiveles{
-    height: 340vh;
-    text-align: center;
+
+.image-slider {
+    width: 100%; 
+    height: 30vh; 
+    background-color: #ffffff;
+    overflow: hidden; 
     position: relative;
-    padding-top: 5%;
-    background-image: url(./images/Fondolargo1.jpg);
-    background-size: cover;
-    padding-bottom: 80vh;
-}
-.seccionNiveles::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad */
     z-index: 1;
 }
 
-.seccionNiveles > * {
-    position: relative;
-    z-index: 2; /* Asegura que el contenido esté por encima de la capa */
+
+.image-container {
+    display: flex; 
+    animation: slide 15s linear infinite; 
+    gap: 5%;
+    height: 100%;
+    align-items: center;
 }
 
-.textoElevar{
-    color: white;
+
+.image-container img {
+    height: 90%; 
+    width: auto;
+    object-fit: cover; 
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%); /* Empieza desde la derecha (fuera de la pantalla) */
+    }
+    100% {
+        transform: translateX(-100%); /* Termina en la izquierda (fuera de la pantalla) */
+    }
+}
+
+
+
+
+
+/* TRABAJOS */
+
+.seccionTrabajos{
+    height: 100%;
+    background-image: linear-gradient(rgba(41, 41, 41, 0.5), rgba(46, 46, 46, 0.5)), url(./images/fondo2.jpg);
+    background-size: cover;
+    padding: 5%;
+    z-index: 4;
+}
+.seccionTrabajos h2{
+    margin-bottom: 9%;
+    margin-top: 3%;
+    margin-left: 5%;
     font-size: 4vw;
-    text-shadow: 4px 4px 0px black;
-}
-.textoElevar span{
-    background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 4.5vw;
-    text-shadow: none;
-}
-.textoContainer{
-    position: sticky;
-    top: 15%;
-}
-
-.nivelesContainer{
-    position: sticky;
-    top: 28%;
-}
-.niveles{
-    position: absolute;
-    top: 0;
-    left: 0%;
-    padding-left: 20%;
-    padding-right: 20%;
-    transition: opacity 0.5s ease-in-out;
-}
-.niveles h4{
-    margin-top: 10%;
-    font-size: 3.5vw;
     color: white;
-    text-shadow: 4px 4px 0px black;
 }
-.niveles p{
-    margin-top: 5%;
-    font-size: 2.5vw;
-    color: white;
-    text-shadow: 4px 4px 0px black;
+.trabajos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
+.trabajo{
+    width: 30%;
+    height: 80vh;
+    border-radius: 12px;
+    transition: transform 1s ease;
+    z-index: 4;
+}
+.trabajo:hover{
+    transform: scale(1.2);
+    box-shadow:  -5px -5px 12px #a2a2a2,
+    5px 5px 9px #a2a2a2;
+}
 
-.cohete {
-    position: absolute;
-    width: 10vw; /* Ajusta el tamaño del cohete */
-    top: 30%;
-    right: 10%;
-    transition: transform 0.1s linear;
+#trabajo1{
+    background-image: url(./images/mbau.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#trabajo2{
+    background-image: url(./images/petit.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+#trabajo3{
+    background-image: url(./images/cure.png);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
 }
 
 
@@ -426,6 +401,7 @@ header img{
 
 
 
+/*CONTACTO*/
 
 .contacto{
     height: 100%;
@@ -433,63 +409,51 @@ header img{
     background-image: url(./images/fondoBlancod.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: left;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 8%;
+    padding: 4%;
 }
 
 .imagenContacto{
-    width: 45%;
-    height: auto;
+    width: 35%;
+    height: 100vh;
     border-radius: 8%;
-    overflow: hidden;
-    z-index: 1;
+    z-index: 3;
+    background-image: url(./images/FondoMac.jpeg);
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: right;
+    background-attachment: fixed;
+    display: flex;
 }
-.imagenContacto img{
-    width: 100%;
-    border-radius: 8%;
-    transition: transform 8s ease;
-    z-index: 1;
 
-}
-.imagenContacto img:hover{
-    transform: scale(2);
-}
 
 .formulario{
-    width: 45%;
+    width: 60%;
     z-index: 1;
 }
 
-.contact-section {
-    width: 90%;
-    margin: 20px auto;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    z-index: 1;
-}
 
 /* Encabezado del formulario */
 .contact-header {
     display: flex;
     align-items: center;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 6%;
     z-index: 1;
 }
 
 .contact-header h3 {
-    font-size: 4vw;
-    background: linear-gradient(90deg, #440efc 17%, #9d0bfd 70%, #e6007f 100%);
+    font-size: 3.5vw;
+    background: linear-gradient(90deg, #440ea7 50%, #be1622 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 8%;
+    padding-bottom: 1%;
     z-index: 1;
 }
 
@@ -498,8 +462,7 @@ header img{
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 10%;
-    padding-bottom: 6%;
+    padding-bottom: 2%;
     padding-top: 2%;
     z-index: 1;
     max-width: 300px;
@@ -509,7 +472,7 @@ header img{
     display: flex;
     align-items: center;
     text-align: center;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     color: #555;
     z-index: 1;
 }
@@ -523,7 +486,7 @@ header img{
 
 .info-item img {
     width: 20%;
-    margin-right: 3%;
+    margin-right: 7%;
     z-index: 1;
 }
 
@@ -537,28 +500,31 @@ header img{
 .form-group {
     display: flex;
     flex-direction: column;
-    padding-bottom: 3%;
+    align-items: center;
+    padding-bottom: 2%;
     z-index: 1;
 }
 
 label {
-    font-size: 1vw;
-    margin-bottom: 4%;
+    font-size: 1.2vw;
+    font-weight: 600;
+    margin-bottom: 3%;
     color: #222222;
     z-index: 1;
     text-align: center;
 }
 
 input, textarea {
-    width: 100%;
-    padding: 2%;
+    width: 70%;
+    padding: 1%;
     border: 1px solid #dcdcdc;
     border-radius: 12px;
-    font-size: 1vw;
+    font-size: 1.2vw;
+    font-weight: 500;
     transition: border-color 0.3s ease-in-out;
     z-index: 1;
     text-align: center;
-    margin-bottom: 3%;
+    margin-bottom: 1%;
     color: #2c2c2c;
 }
 input::placeholder,
@@ -575,18 +541,19 @@ input:focus, textarea:focus {
 /* Botón */
 .botonEnviar {
     padding: 10px 15px;
-    background: linear-gradient(90deg, #440efc 17%, rgba(157,11,253,1) 70%, #e6007f 100%);;;
+    background: linear-gradient(90deg, #440ea7 50%, #be1622 100%);
     color: white;
     border: none;
     border-radius: 12px;
     font-size: 1.3vw;
     z-index: 1;
     cursor: none;
+    width: 60%;
+    margin-left: 20%;
 }
 
 .botonEnviar:hover {
-    background: rgba(68,14,252,1); 
-    border: 2px solid #468189; 
+    background: #440ea7;  
 }
 
 
@@ -647,33 +614,14 @@ footer h3{
 
 
 
-@media (max-height: 600px) {
-    .seccionNiveles{
-        height: 530vh;
-    }
-}
 
 
 @media (max-width: 460px) {
-
-    header img{
+    header a{
         width: 30%;
     }
     .firstSection{
-        height: 90vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-right: 5%;
-        padding-left: 5%;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='1015' viewBox='0 0 1440 1015' fill='none'%3E%3Cpath d='M198 242.5C42.5 242.5 26.5 356 -13.5 338V710.5V1029.5H1452.5V0.5C1422.67 43.8333 1397.18 51.6577 1322.5 89C1243.5 128.5 1243.5 217 1127 231C990.979 247.346 1038 163.5 887 163.5C736 163.5 627.856 366.193 503 338C410 317 353.5 242.5 198 242.5Z' fill='%23fff6ec'/%3E%3C/svg%3E");
-        background-size: cover;
-        background-attachment: fixed;
-        padding-top: 20%;
-        background-color: #141414;
-    }
-    .fondoMac{
-        display: none;
+        height: 100vh;
     }
     .firstText{
         display: flex;
@@ -686,28 +634,17 @@ footer h3{
         font-size: 13vw;
         color: white;
         font-weight: 700;
-        transition: opacity 0.7s ease, visibility 0.3s ease, transform 2s ease;
         letter-spacing: 2px;
         margin-bottom: 10%;
-        line-height: 1.9;
+        line-height: 1.5;
     }
     .subtitulo{
         font-size: 9vw;
-        font-weight: 400;
-        font-style: italic;
-        color: rgb(0, 0, 0);
-        text-shadow: 1px 1px 1px white;
-        line-height: 1.3;
-        margin-top: 10%;
-    }
-    .subtitulo2{
-        color: white;
-        text-shadow: none;
+        top: 55%;
     }
     .buttonContainer{
         display: flex;
         width: 80vw;
-        margin-top: 25%;
     }
     .button{
         width: 80vw;
@@ -715,13 +652,14 @@ footer h3{
         border-radius: 12px;
         border: none;
         outline: none;
-        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);;
-        color: white;
-        font-size: 4vw;
+        font-size: 5.5vw;
         letter-spacing: 2px;
         font-weight: 600;
         cursor: none;
     }
+
+
+
 
     .image-container {
         display: flex; 
@@ -733,6 +671,10 @@ footer h3{
     .image-slider{
         height: 20vh;
     }
+
+
+
+
     .servicios{
         flex-direction: column;
         height: 100%;
@@ -741,71 +683,72 @@ footer h3{
     }
     .servicios h2{
         font-size: 11vw;
-        margin-bottom: 15%;
+        margin-bottom: 10%;
         position: sticky;
         top: 13%;
     }
+    .textoServicios{
+        font-size: 5vw;
+        margin-bottom: 20%;
+        margin-top: -5%;
+    }
     .card{
         width: 90vw;
-        height: 40vh;
+        height: 60vh;
         margin-bottom: 15%;
     }
+    .cardContent {
+        background-color: white; 
+        border-radius: 12px;
+        width: 100%;
+        height: 100%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        transition: transform 0.3s ease, color 0.3s ease;
+        padding-left: 0%;
+        padding-right: 0%;
+        padding-bottom: 0%;
+    }
     .cardContent h4{
-        font-size: 7vw;
-        margin-top: -10%;
+        font-size: 8vw;
+        margin-top: 5%;
+        padding-top: 0%;
+        padding-bottom: 0%;
     }
     .cardContent p{
         font-size: 6vw;
+        margin-right: 0%;
+        padding-left: 12%;
+        padding-right: 12%;
+        padding-top: 25%;
     }
-    .seccionNiveles{
-        height: 400vh;
-        text-align: center;
-        position: relative;
-        padding-top: 20%;
+    #mantenimiento{
+        font-size: 7.5vw;
     }
-    
-    .textoElevar{
-        color: white;
-        font-size: 10vw;
-        line-height: 1.5;
-        margin-bottom: 15%;
-    }
-    .textoElevar span{
-        background: linear-gradient(90deg, rgba(68,14,252,1) 17%, rgba(157,11,253,1) 70%, #e6007f 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-size: 10vw;
-        
-    }
-    .textoContainer{
-        position: sticky;
-        top: 15%;
-    }
-    
-    .nivelesContainer{
-        position: sticky;
-        top: 45%;
-    }
-    .niveles{
-        position: absolute;
-        top: 0;
-        left: 0%;
-        padding-left: 10%;
-        padding-right: 10%;
-        transition: opacity 0.5s ease-in-out;
-    }
-    .niveles h4{
-        margin-top: 5%;
-        font-size: 10vw;
-        color: white;
-        margin-bottom: 10%;
-    }
-    .niveles p{
-        margin-top: 5%;
-        font-size: 7vw;
-        color: white;
-    }
+
+.seccionTrabajos{
+    flex-direction: column;
+    padding-top: 15%;
+}
+.seccionTrabajos h2{
+    font-size: 9vw;
+    margin-bottom: 25%;
+}
+.trabajos{
+    flex-direction: column;
+}
+.trabajo{
+    width: 92%;
+    height: 65vh;
+    margin-bottom: 15%;
+}
+
+
+
+
     .contacto{
         height: 100%;
         display: flex;
@@ -964,8 +907,6 @@ textarea::placeholder {
     .footerInfo{
         flex-direction: column;
     }
-    .cohete{
-        display: none;
-    }
+
 }
 

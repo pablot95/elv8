@@ -1,35 +1,8 @@
-document.addEventListener('contextmenu', function(event) {
+/*document.addEventListener('contextmenu', function(event) {
     event.preventDefault(); // Bloquea el menú contextual del clic derecho
-});
+});*/
 
-let lastScrollY = window.scrollY;
-const header = document.getElementById('header');
-let timeout;
 
-/*window.addEventListener('scroll', () => {
-
-    if (window.scrollY <= header.offsetHeight) {
-        timeout = setTimeout(() => {
-            header.classList.remove('hiddenHeader'); // Muestra el header después de la inactividad
-        }, 500);
-        return; // Salir de la función para no aplicar otras lógicas
-    }
-
-    if (window.scrollY > lastScrollY) {
-        // Scroll hacia abajo: Esconde el header
-        header.classList.add('hiddenHeader');
-    } else {
-        // Scroll hacia arriba: Muestra el header
-        header.classList.add('hiddenHeader');
-    }
-
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-        header.classList.remove('hiddenHeader'); // Muestra el header después de la inactividad
-    }, 2000);
-
-    lastScrollY = window.scrollY; // Actualiza la posición del scroll
-}); */
 
 
 
@@ -50,42 +23,10 @@ window.addEventListener('scroll', function() {
     }
 });
 
-/*window.addEventListener('scroll', function() {
-    var text = document.getElementById('disappearingTitle');
-    var scrollPosition = window.scrollY;
-    var threshold = 300; // La altura a partir de la cual el texto desaparece
-
-    if (scrollPosition > threshold) {
-        text.classList.add('moveText'); // El texto desaparece
-    } else {
-        text.classList.remove('moveText'); // El texto vuelve a aparecer
-    }
-});*/
-
-/*window.addEventListener('scroll', function() {
-    var text = document.getElementById('disappearingTitle');
-    var scrollPosition = window.scrollY;
-    var threshold = 400; // La altura a partir de la cual el texto desaparece
-
-    if (scrollPosition > threshold) {
-        text.classList.add('hiddenText'); // El texto desaparece
-    } else {
-        text.classList.remove('hiddenText'); // El texto vuelve a aparecer
-    }
-});*/
 
 
-/*window.addEventListener('scroll', function() {
-    var button = document.getElementById('button1'); // O el botón que desees agrandar
-    var scrollPosition = window.scrollY;
-    var threshold = 150; // La altura a partir de la cual el botón se agranda
 
-    if (scrollPosition > threshold) {
-        button.classList.add('enlargeButton'); // Agranda y mueve el botón
-    } else {
-        button.classList.remove('enlargeButton'); // Vuelve a su tamaño y posición original
-    }
-});*/
+
 
 
 /*const cards = document.querySelectorAll('.card');
@@ -127,249 +68,6 @@ document.addEventListener("mousemove", (e) => {
 });
 
 
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel0');
-    var scrollPosition = window.scrollY;
-    var threshold;
-    if (window.innerWidth < 460) {
-        threshold = 2650; // Umbral para pantallas pequeñas
-    } else {
-        threshold = 3900; // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > threshold) {
-        text.classList.add('hiddenText'); // El texto desaparece
-    } else {
-        text.classList.remove('hiddenText'); // El texto vuelve a aparecer
-    }
-});
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel1'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 2650; 
-        thresholdEnd = 2900;
-    } else {
-        thresholdStart = 3900;
-        thresholdEnd = 4100; // Umbral para pantallas más grandes
-    }
-
-
-    if (scrollPosition >  thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel2'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 3900; 
-        thresholdEnd = 3150; // Umbral para pantallas pequeñas
-    } else {
-        thresholdStart = 4100;
-        thresholdEnd = 4300 // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel3'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 3150; 
-        thresholdEnd = 3400;
-    } else {
-        thresholdStart = 4300;
-        thresholdEnd = 4500; // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel4'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 3400; 
-        thresholdEnd = 3650;
-    } else {
-        thresholdStart = 4500;
-        thresholdEnd = 4700; // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel5'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 3650; 
-        thresholdEnd = 3900;
-    } else {
-        thresholdStart = 4700;
-        thresholdEnd = 4900; // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel6'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 3900; 
-        thresholdEnd = 4150;
-    } else {
-        thresholdStart = 4900;
-        thresholdEnd = 5100; // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel7'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 4150; 
-        thresholdEnd = 4400;
-    } else {
-        thresholdStart = 5100;
-        thresholdEnd = 5300; // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-
-window.addEventListener('scroll', function() {
-    var text = document.getElementById('nivel8'); // Cambia a tu elemento objetivo
-    var scrollPosition = window.scrollY;
-    var thresholdStart;
-    var thresholdEnd;
-    if (window.innerWidth < 460) {
-        thresholdStart = 4400; 
-        thresholdEnd = 8000;
-    } else {
-        thresholdStart = 5300;
-        thresholdEnd = 8100; // Umbral para pantallas más grandes
-    }
-
-    if (scrollPosition > thresholdStart && scrollPosition < thresholdEnd) {
-        text.classList.remove('hiddenText'); // El texto aparece
-    } else {
-        text.classList.add('hiddenText'); // El texto permanece oculto
-    }
-});
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const rellaxElements = document.querySelectorAll('.circle');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('rellax'); // Agrega la clase cuando el elemento entra en pantalla
-                new Rellax(entry.target, {
-                    speed: entry.target.dataset.rellaxSpeed || -2, // Velocidad personalizada
-                });
-                observer.unobserve(entry.target); // Deja de observar para evitar reinicializaciones
-            }
-        });
-    }, { threshold: 0.05 }); // Se activa cuando el 5% del elemento es visible
-
-    // Observa cada elemento con la clase circle
-    rellaxElements.forEach((el) => observer.observe(el));
-});
-
-var rellax = new Rellax('.rellax');
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('#header h1');
-    const sections = document.querySelectorAll('section');
-
-    // Configuración del IntersectionObserver
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-                // Cambia el color del header basado en el ID o dataset de la sección
-                switch (entry.target.id) {
-                    case 'section1':
-                        header.style.color = 'white';
-                        break;
-                    case 'section2':
-                        header.style.color = 'black';
-                        break;
-                    case 'section3':
-                        header.style.color = 'white';
-                        break;
-                        case 'section4':
-                        header.style.color = 'black';
-                        break;
-                    default:
-                        header.style.color = 'white';
-                }
-            }
-        });
-    }, { threshold: 0.5 }); // Se activa cuando el 50% de la sección es visible
-
-    // Observa todas las secciones
-    sections.forEach((section) => observer.observe(section));
-});
-
-
-
-
 
 emailjs.init('_WA82jXCJEH8sWNSq');
 
@@ -401,31 +99,75 @@ document.querySelector('.contact-form').addEventListener('submit', function (e) 
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Seleccionamos el cohete y la sección de niveles
-    const cohete = document.querySelector(".cohete");
-    const seccionNiveles = document.querySelector(".seccionNiveles");
 
-    // Creamos un observador para ver cuándo la sección entra en la pantalla
-    const observer = new IntersectionObserver((entries) => {
-        // Revisamos si la sección se ha hecho visible
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Si la sección entra en pantalla, activar el scroll para mover el cohete
-                window.addEventListener("scroll", function() {
-                    const scrollPosition = window.scrollY; // Posición actual del scroll
-                    const moveAmount = (scrollPosition / 950) * 29 ;
-                    cohete.style.top = `${moveAmount - 90}%`; // Ajustamos la posición del cohete
-                });
+
+
+
+const texts = ["Transformamos tu visión en realidad" , "Destacá en el mundo digital hoy"];
+const typewriter = document.getElementById("typewriter");
+
+let index = 0; // Índice de la palabra
+let charIndex = 0; // Índice del carácter actual
+let isDeleting = false; // Determina si se está borrando
+let typingSpeed = 40; // Velocidad de escritura
+let pauseTime = 2500; // Pausa entre palabras
+
+function typeEffect() {
+    const currentText = texts[index];
+    // Determina el contenido actual
+    if (isDeleting) {
+        charIndex--; // Borrar caracteres
+    } else {
+        charIndex++; // Agregar caracteres
+    }
+
+    // Mostrar el texto en el elemento
+    typewriter.textContent = currentText.substring(0, charIndex);
+
+    // Controlar cuándo borrar o escribir
+    if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true; // Comienza a borrar
+        setTimeout(typeEffect, pauseTime); // Pausa antes de borrar
+        return;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false; // Cambiar a escribir
+        index = (index + 1) % texts.length; // Cambiar a la siguiente palabra
+    }
+
+    // Ajustar velocidad
+    const speed = isDeleting ? typingSpeed / 2 : typingSpeed;
+    setTimeout(typeEffect, speed);
+}
+
+// Inicia el efecto
+typeEffect();
+
+
+
+const dynamicImage = document.getElementById('logo');
+
+// Definición de umbrales y rutas de imágenes
+const thresholds = [
+    { limit: 650, src: './images/Logo 2-02-02.png' },
+    { limit: 3800, src: './images/Logo 1-01.png' },
+    { limit: 4750, src: './images/Logo 2-02-02.png' },
+    { limit: Infinity, src: './images/Logo 1-01.png' },
+];
+
+// Función para actualizar la imagen según el scroll
+function updateImageOnScroll() {
+    const scrollPosition = window.scrollY;
+
+    // Busca la imagen adecuada según el umbral
+    for (const threshold of thresholds) {
+        if (scrollPosition <= threshold.limit) {
+            if (dynamicImage.src !== location.origin + threshold.src) {
+                dynamicImage.src = threshold.src; // Cambia la imagen
             }
-        });
-    }, {
-        threshold: 0.01 // Ajustamos el umbral para que se active cuando al menos el 10% de la sección esté visible
-    });
+            break;
+        }
+    }
+}
 
-    // Comenzamos a observar la sección de niveles
-    observer.observe(seccionNiveles);
-});
-
-
-
+// Escucha el evento de scroll
+window.addEventListener('scroll', updateImageOnScroll);

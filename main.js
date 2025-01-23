@@ -4,31 +4,6 @@
 
 
 
-
-
-window.addEventListener('scroll', function() {
-    var text = document.querySelector('.subtitulo');
-    var scrollPosition = window.scrollY;
-    var threshold;
-    if (window.innerWidth < 460) {
-        threshold = 300; 
-    } else {
-        threshold = 250; 
-    }
-
-    if (scrollPosition > threshold) {
-        text.classList.add('subtitulo2');
-    } else {
-        text.classList.remove('subtitulo2'); 
-    }
-});
-
-
-
-
-
-
-
 /*const cards = document.querySelectorAll('.card');
 
 cards.forEach((card) => {
@@ -144,25 +119,56 @@ typeEffect();
 
 
 
+
+
+
+
 const dynamicImage = document.getElementById('logo');
+
+let value = 100;
+let unit = "vh";
+
+let vh = value + unit;
 
 // Definición de umbrales y rutas de imágenes
 const thresholds = [
-    { limit: 650, src: './images/Logo 2-02-02.png' },
+    { limit: window.innerHeight, src: './images/Logo 2-02-02.png' },
     { limit: 3800, src: './images/Logo 1-01.png' },
     { limit: 4750, src: './images/Logo 2-02-02.png' },
     { limit: Infinity, src: './images/Logo 1-01.png' },
 ];
 
-// Función para actualizar la imagen según el scroll
+
+function updateThresholds() {
+    if (window.innerWidth < 460) {
+        thresholds[0].limit = window.innerHeight; // Cambiar el valor de ejemplo
+        thresholds[1].limit = window.innerHeight * 3.8;                  // Actualizar otros valores
+        thresholds[2].limit = window.innerHeight * 6.2;
+        thresholds[3].limit = Infinity;
+    } else {
+        thresholds[0].limit = window.innerHeight;   // Valores por defecto
+        thresholds[1].limit = 3800;
+        thresholds[2].limit = 4750;
+        thresholds[3].limit = Infinity;
+    }
+}
+
+updateThresholds();
+
+window.addEventListener('resize', updateThresholds);
+
+thresholds[0].limit = window.innerHeight;
+
+
+
 function updateImageOnScroll() {
     const scrollPosition = window.scrollY;
 
-    // Busca la imagen adecuada según el umbral
+    
     for (const threshold of thresholds) {
         if (scrollPosition <= threshold.limit) {
             if (dynamicImage.src !== location.origin + threshold.src) {
-                dynamicImage.src = threshold.src; // Cambia la imagen
+                dynamicImage.src = threshold.src; 
             }
             break;
         }

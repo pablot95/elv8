@@ -298,6 +298,19 @@ header img{
     }
 }
 
+/* WHATSAPP*/
+
+.whatsapp{
+    position: fixed;
+    bottom: 3%;
+    right: 2%;
+    width: 5.5%;
+    z-index: 1000;
+    text-decoration: none;
+}
+.whatsapp img{
+    width: 100%;
+}
 
 
 
@@ -567,7 +580,7 @@ footer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 15%;
+    padding-left: 10%;
     padding-right: 5%;
     background-color: #141414;
 }
@@ -575,7 +588,13 @@ footer{
     width: 45%;
 }
 footer img{
-    width: 50%;
+    width: 30%;
+}
+footer p{
+    font-size: 1.3vw;
+    width: 80%;
+    color: white;
+    padding-left: 3%;
 }
 footer h3{
     font-size: 2.5vw;
@@ -694,7 +713,7 @@ footer h3{
     }
     .card{
         width: 90vw;
-        height: 60vh;
+        height: 50vh;
         margin-bottom: 15%;
     }
     .cardContent {
@@ -721,8 +740,8 @@ footer h3{
     .cardContent p{
         font-size: 6vw;
         margin-right: 0%;
-        padding-left: 12%;
-        padding-right: 12%;
+        padding-left: 10%;
+        padding-right: 10%;
         padding-top: 25%;
     }
     #mantenimiento{
@@ -756,7 +775,8 @@ footer h3{
         align-items: center;
     }
     .imagenContacto{
-        width: 90%;
+        width: 100%;
+        height: 50vh;
     }
     .formulario{
         width: 100%;
@@ -875,8 +895,24 @@ textarea::placeholder {
         z-index: 1;
         margin-bottom: 15%;
     }
+
+    .whatsapp{
+        position: fixed;
+        bottom: 1%;
+        right: 5%;
+        width: 20%;
+        z-index: 1000;
+        text-decoration: none;
+    }
+    .whatsapp img{
+        width: 100%;
+    }
+
+
+
+
     footer{
-        height: 30vh;
+        height: 40vh;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -887,9 +923,17 @@ textarea::placeholder {
     .footerIzq{
         display: flex;
         justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    footer p{
+        font-size: 3.5vw;
+        width: 80%;
     }
     footer img{
-        width: 100%;
+        width: 50%;
     }
     footer h3{
         font-size: 5vw;
@@ -898,11 +942,12 @@ textarea::placeholder {
         background-clip: text;
         -webkit-text-fill-color: transparent;
         text-align: center;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
     }
     .footerDer p{
         font-size: 3vw;
-        margin-top: 5%;
+        margin-top: 2%;
+        text-align: center;
     }
     .footerInfo{
         flex-direction: column;

@@ -381,7 +381,7 @@ header img{
     margin-bottom: 9%;
     margin-top: 3%;
     margin-left: 5%;
-    font-size: 4vw;
+    font-size: 4.5vw;
     color: white;
 }
 .trabajos{
@@ -724,9 +724,12 @@ footer h3{
         margin-bottom: 20%;
         margin-top: -5%;
     }
+
+
+
     .card{
         width: 90vw;
-        height: 50vh;
+        height: 450px;
         margin-bottom: 15%;
     }
     .cardContent {
@@ -738,7 +741,7 @@ footer h3{
         flex-direction: column;
         align-items: center;
         text-align: center;
-        justify-content: center;
+        justify-content: space-around;
         transition: transform 0.3s ease, color 0.3s ease;
         padding-left: 0%;
         padding-right: 0%;
@@ -746,7 +749,7 @@ footer h3{
     }
     .cardContent h4{
         font-size: 8vw;
-        margin-top: 5%;
+        margin-top: 0px;
         padding-top: 0%;
         padding-bottom: 0%;
     }
@@ -755,11 +758,13 @@ footer h3{
         margin-right: 0%;
         padding-left: 10%;
         padding-right: 10%;
-        padding-top: 25%;
+        padding-top: 0;
     }
     #mantenimiento{
         font-size: 7.5vw;
     }
+
+
 
 .seccionTrabajos{
     flex-direction: column;
